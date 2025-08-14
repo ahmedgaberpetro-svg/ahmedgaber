@@ -4,23 +4,31 @@ import streamlit as st
 USERNAME = "ahmedgaberpetro-svg"   # غيّرها لو اسم حسابك مختلف
 REPO = "ahmedgaber"      # غيّره لو سميت الريبو غير ذلك
 
-BASE = f"https://cdn.jsdelivr.net/gh/{USERNAME}/{REPO}@main/icons"
-ICON32 = f"{BASE}/icon-32.png"
-ICON192 = f"{BASE}/icon-192.png"
-ICON512 = f"{BASE}/icon-512.png"
-APPLE  = f"{BASE}/apple-touch-icon.png"
-MANIFEST_URL = f"https://cdn.jsdelivr.net/gh/{USERNAME}/{REPO}@main/manifest.webmanifest"
+import streamlit as st
 
-st.set_page_config(page_title="Sawaqit", page_icon=ICON192, layout="centered")
+# روابط مباشرة عبر jsDelivr لملفاتك في الريبو ahmedgaberpetro-svg/ahmedgaber
+ICON32   = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/icon-32.png"
+ICON192  = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/icon-192.png"
+ICON512  = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/icon-512.png"
+APPLE    = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/apple-touch-icon.png"
+MANIFEST = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/manifest.webmanifest"
 
+# favicon في التبويب + عنوان الصفحة
+st.set_page_config(page_title="Sawaqit", page_icon=ICON32)
+
+# حقن روابط الأيقونات والمانيفست في <head>
 st.markdown(
     f"""
-    <link rel="icon" href="{ICON32}" sizes="32x32" />
-    <link rel="apple-touch-icon" href="{APPLE}" />
-    <link rel="manifest" href="{MANIFEST_URL}">
-    <meta name="theme-color" content="#0f766e">
+    <link rel="apple-touch-icon" href="{APPLE}">
+    <link rel="icon" type="image/png" sizes="32x32"  href="{ICON32}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{ICON192}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{ICON512}">
+    <link rel="manifest" href="{MANIFEST}">
+    <meta name="theme-color" content="#0ea5e9">
     """,
     unsafe_allow_html=True,
+)
+
 )
 
 st.title("Sawaqit — توزيع السواقط")
