@@ -6,17 +6,18 @@ REPO = "ahmedgaber"      # غيّره لو سميت الريبو غير ذلك
 
 import streamlit as st
 
-# روابط مباشرة عبر jsDelivr لملفاتك في الريبو ahmedgaberpetro-svg/ahmedgaber
-ICON32   = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/icon-32.png"
-ICON192  = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/icon-192.png"
-ICON512  = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/icon-512.png"
-APPLE    = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/apple-touch-icon.png"
-MANIFEST = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/ahmedgaber@main/manifest.webmanifest"
+import streamlit as st
 
-# favicon في التبويب + عنوان الصفحة
+# روابط الأيقونات والمانيفست من الريبو الجديد عبر jsDelivr
+ICON32   = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/sawaqit-app@main/icon-32.png"
+ICON192  = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/sawaqit-app@main/icon-192.png"
+ICON512  = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/sawaqit-app@main/icon-512.png"
+APPLE    = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/sawaqit-app@main/apple-touch-icon.png"
+MANIFEST = "https://cdn.jsdelivr.net/gh/ahmedgaberpetro-svg/sawaqit-app@main/manifest.webmanifest"
+
 st.set_page_config(page_title="Sawaqit", page_icon=ICON32)
 
-# حقن روابط الأيقونات والمانيفست في <head>
+# حقن أيقونات + مانيفست في <head>
 st.markdown(
     f"""
     <link rel="apple-touch-icon" href="{APPLE}">
@@ -27,6 +28,7 @@ st.markdown(
     <meta name="theme-color" content="#0ea5e9">
     """,
     unsafe_allow_html=True,
+)
 )
 
 )
