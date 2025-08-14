@@ -1,8 +1,8 @@
 
 import streamlit as st
 
-USERNAME = "ahmedgaber"   # غيّرها لو اسم حسابك مختلف
-REPO = "sawaqit-pwa"      # غيّره لو سميت الريبو غير ذلك
+USERNAME = "ahmedgaberpetro-svg"   # غيّرها لو اسم حسابك مختلف
+REPO = "ahmedgaber"      # غيّره لو سميت الريبو غير ذلك
 
 BASE = f"https://cdn.jsdelivr.net/gh/{USERNAME}/{REPO}@main/icons"
 ICON32 = f"{BASE}/icon-32.png"
